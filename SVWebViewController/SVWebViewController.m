@@ -287,7 +287,8 @@
             UIDocumentInteractionController *dc = [UIDocumentInteractionController interactionControllerWithURL:url];
             [dc presentOptionsMenuFromRect:self.view.bounds inView:self.view animated:YES];
         } else {
-            UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:@[url] applicationActivities:activities];
+            
+            UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:@[url, self.webView.viewPrintFormatter] applicationActivities:activities];
             
 #ifdef __IPHONE_8_0
             if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_7_1 &&
