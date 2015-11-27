@@ -55,6 +55,7 @@
     
     self.webViewController.title = self.title;
     self.navigationBar.tintColor = self.barsTintColor;
+    [self.navigationBar setTranslucent:NO];
 }
 
 #pragma mark - Delegate
